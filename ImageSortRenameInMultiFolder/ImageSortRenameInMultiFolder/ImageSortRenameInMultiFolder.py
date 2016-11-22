@@ -1,11 +1,14 @@
-import ImgSorRename as imgrename
+import GetFilePathFromDir as getfdir
 import os
+from Tkinter import Tk
+from tkFileDialog import askdirectory
 
-classs = imgrename.ImgSorRename()
-inputpath = r"D:\002ImageClassificationData\01_ SamTransistor\First\Pass\Gray"
-outputpath = r"D:\002ImageClassificationData\01_ SamTransistor\First\Sort\Gray_PassAll"
+Tk().withdraw()
+inputdirnmae = askdirectory()
+outputdirname = askdirectory()
 
-filepath = os.listdir(inputpath)
+PathMana = getfdir.GetFileinDir()
 
-imgspath = classs.GetPathFilesinRootFolder(inputpath)
-classs.SaveandRenameOrderBy( imgspath , outputpath)
+imgspath = PathMana.GetPathFilesinRootFolder(inputdirnmae)
+
+#classs.SaveandRenameOrderBy( imgspath , outputdirname)

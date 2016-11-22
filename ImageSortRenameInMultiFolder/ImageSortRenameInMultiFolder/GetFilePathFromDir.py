@@ -1,7 +1,7 @@
 import os 
 import shutil
 
-class ImgSorRename():
+class GetFileinDir():
     
     def GetPathFilesinFolder(self,dirpath):
         filepath = os.listdir(dirpath)
